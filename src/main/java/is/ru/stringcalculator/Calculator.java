@@ -49,10 +49,16 @@ public class Calculator {
    		}
    		if(count > 0)
    		{
-   			String message ="Negative not allowed: ";
-   			for(String temp : result)
+   			String message ="Negative not allowed: " + result[0];
+   			if(count > 1)
    			{
-   				message += temp;
+
+	   			for(String temp : result)
+   				{
+   					if(temp == result[0]) continue;
+
+   					message += "," + temp;
+   				}
    			}
    			throw new IllegalArgumentException(message);
    		}

@@ -59,5 +59,10 @@ public class CalculatorTest
     {
     	   assertEquals(6, Calculator.add("1,2\n3,1009"));
     }
+    @Test
+    public void testDelimeterChange()
+    {
+    	   assertEquals(3, Calculator.add("//;\n1;2"));
+    }
 
 }

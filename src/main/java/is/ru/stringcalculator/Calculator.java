@@ -31,7 +31,8 @@ public class Calculator {
  	    int total = 0;
         for(String number : numbers)
         {
-		    total += toInt(number);
+        	int res = toInt(number);
+			if(res <= 1000) total += toInt(number);
 		}
 		return total;
     }
@@ -63,5 +64,4 @@ public class Calculator {
    			throw new IllegalArgumentException(message);
    		}
    	}
-
 }

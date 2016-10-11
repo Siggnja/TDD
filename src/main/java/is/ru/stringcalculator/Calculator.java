@@ -44,8 +44,7 @@ public class Calculator {
    		{
    			if(toInt(temp) < 0)
    			{
-   				result[count] = temp;
-   				count++;
+   				result[count++] = temp;
    			}
    		}
    		if(count > 0)

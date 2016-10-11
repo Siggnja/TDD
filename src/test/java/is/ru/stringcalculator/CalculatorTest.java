@@ -47,7 +47,7 @@ public class CalculatorTest
    		    thrown.expectMessage("Negative not allowed: -1");
    		    Calculator.add("-1,2\n3");
     }
-        @Test
+    @Test
     public void testManyNegativeInput()
     {
     	    thrown.expect(IllegalArgumentException.class);

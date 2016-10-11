@@ -54,5 +54,10 @@ public class CalculatorTest
    		    thrown.expectMessage("Negative not allowed: -1,-5,-10");
    		    Calculator.add("-1,2\n3,-5,-10,5");
     }
+    @Test
+    public void testOver1000()
+    {
+    	   assertEquals(6, Calculator.add("1,2\n3,1009"));
+    }
 
 }

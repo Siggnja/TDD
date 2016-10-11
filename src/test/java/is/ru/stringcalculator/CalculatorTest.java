@@ -41,10 +41,12 @@ public class CalculatorTest
     	assertEquals(10, Calculator.add("1\n2\n3,4"));
     }
     @Test
-    public void testNegativeInput() throws IllegalArgumentException
+    public void testNegativeInput()
     {
     	    thrown.expect(IllegalArgumentException.class);
    		    thrown.expectMessage("Negative not allowed: -1");
+   		    Calculator.add("-1,2\n3");
+
     }
 
 }

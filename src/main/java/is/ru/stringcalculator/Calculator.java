@@ -1,16 +1,19 @@
 package is.ru.stringcalculator;
 
-public class Calculator {
-
+public class Calculator 
+{
 	public static int add(String text)
 	{
 		if(text.equals("")){
 			return 0;
 		}
+		if(text.startsWith("//"))
+		{		
+			return sum(splitSpecialDelimNumbers(text));
+		}
 		else if(text.contains(","))
 		{
-			testNegativity(splitNumbers(text));
-			return sum(splitNumbers(text));
+			return sum(splitNumbers(text)) ;
 		}
 		else
 			return 1;
@@ -22,10 +25,18 @@ public class Calculator {
 	}
 
 	private static String[] splitNumbers(String numbers)
-	{
+	{	
+		testNegativity(numbers.split(",|\n"));
 	    return numbers.split(",|\n");
 	}
-      
+    private static String[] splitSpecialDelimNumbers(String numbers)
+    {
+    	String[] res = numbers.split("\n",2);
+		String special = res[0].substring(2);
+		testNegativity(res[1].split(special));
+		return res[1].split(special);
+
+    }
     private static int sum(String[] numbers)
     {
  	    int total = 0;

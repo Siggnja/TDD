@@ -18,7 +18,7 @@ public class Calculator
 		else
 			return 1;
 	}
-
+  //Changes string to number
 	private static int toInt(String number)
 	{
 		return Integer.parseInt(number);
@@ -32,9 +32,9 @@ public class Calculator
     private static String[] splitSpecialDelimNumbers(String numbers)
     {
     	String[] res = numbers.split("\n",2);
-		String special = res[0].substring(2);
-		testNegativity(res[1].split(special));
-		return res[1].split(special);
+		  String special = res[0].substring(2);
+		  testNegativity(res[1].split(special));
+		  return res[1].split(special);
 
     }
     private static int sum(String[] numbers)

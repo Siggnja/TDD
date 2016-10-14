@@ -23,20 +23,19 @@ public class Calculator
 	{
 		return Integer.parseInt(number);
 	}
-
+  //Splits by /n and , also tests for negative numbers
 	private static String[] splitNumbers(String numbers)
 	{	
-		testNegativity(numbers.split(",|\n"));
+		  testNegativity(numbers.split(",|\n"));
 	    return numbers.split(",|\n");
 	}
-    private static String[] splitSpecialDelimNumbers(String numbers)
-    {
+  private static String[] splitSpecialDelimNumbers(String numbers)
+  {
     	String[] res = numbers.split("\n",2);
 		  String special = res[0].substring(2);
 		  testNegativity(res[1].split(special));
 		  return res[1].split(special);
-
-    }
+  }
     private static int sum(String[] numbers)
     {
  	    int total = 0;

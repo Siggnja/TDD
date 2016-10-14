@@ -71,6 +71,8 @@ public class CalculatorTest
    		    thrown.expectMessage("Negative not allowed: -5");
    		    Calculator.add("//;\n1;2;-5");
     }
-
-
+        public void testDelimeterWithSpecialAndNormal()
+    {
+            assertEquals(10, Calculator.add("//;\n1;2,3\n4"));
+    }
 }

@@ -64,15 +64,11 @@ public class CalculatorTest
     {
     	   assertEquals(3, Calculator.add("//;\n1;2"));
     }
-        @Test
+    @Test
     public void testDelimeterChangeWithNegativity()
     {
     	    thrown.expect(IllegalArgumentException.class);
    		    thrown.expectMessage("Negative not allowed: -5");
    		    Calculator.add("//;\n1;2;-5");
-    }
-        public void testDelimeterWithSpecialAndNormal()
-    {
-            assertEquals(10, Calculator.add("//;\n1;2,3\n4"));
     }
 }

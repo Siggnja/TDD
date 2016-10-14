@@ -29,7 +29,6 @@ public class Calculator
 		  testNegativity(numbers.split(",|\n"));
 	    return numbers.split(",|\n");
 	}
-  //Splits by special delimeter given
   private static String[] splitSpecialDelimNumbers(String numbers)
   {
     	String[] res = numbers.split("\n",2);
@@ -37,7 +36,6 @@ public class Calculator
 		  testNegativity(res[1].split(special));
 		  return res[1].split(special);
   }
-  //Sums up the values
     private static int sum(String[] numbers)
     {
  	    int total = 0;
@@ -48,7 +46,7 @@ public class Calculator
 		}
 		return total;
     }
-    //Test if numbers are negaative
+
     private static void testNegativity(String[] numbers)
    	{
    		String result[] = new String[numbers.length];
